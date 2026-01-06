@@ -1,23 +1,16 @@
 "use client"
-import { useState } from 'react'
+import { useContext } from 'react'
 import MobileMenubar from './MobileMenubar'
 import BurgerMenu from './BurgerMenu'
+import { HeaderContext } from '@/app/context/HeaderContext'
 
 const BurgerComponent = () => {
 
-    const [isMobileMenuShowing, setIsMobileMenuShowing] = useState(false)
-
-    const handleMobileMenuToggle = () => {
-        try {
-            setIsMobileMenuShowing((prev) => !prev)
-        } catch (error) {
-            console.log("error", error)
-        }
-    }
-
+    const  isMobileMenuShowing  = useContext(HeaderContext).isMobileMenuShowing;
+    console.log("isMobileMenuShowing", isMobileMenuShowing);    
     return (
         <div className="md:hidden" >
-            {isMobileMenuShowing ? <MobileMenubar handleMobileMenuToggle={handleMobileMenuToggle}/> : <BurgerMenu handleMobileMenuToggle={handleMobileMenuToggle} />}
+            {isMobileMenuShowing ? <MobileMenubar /> : <BurgerMenu />}
         </div>
     )
 }
