@@ -3,5 +3,5 @@ export const menu = [
     {label:"Industry", src:"/industry"},
     {label:"Services", src:"/services"},
     {label:"Career", src:"/career"},
-    {label:"Contact Us", src:"/contact Us"}
+    {label:"Contact Us", src:"/contactUs"}
 ]

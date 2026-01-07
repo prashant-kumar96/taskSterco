@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Logo = () => {
   return (
-    <div className="w-[100px] md:w-[105px] h-[30px]  md:h-[32px] relative my-6 md:my-7">
+    <Link className="w-[100px] md:w-[105px] h-[30px]  md:h-[32px] relative my-6 md:my-7" href="/">
       <Image src="/header/logo.png" alt="logoImage" fill={true} />
-    </div>
+    </Link>
   )
 }
 
