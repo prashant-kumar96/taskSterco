@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   return (
-    <div className={`border-b-1 border-white bg-[#000000c9] fixed w-screen flex items-center justify-between lg:justify-around ${!isMobileMenuShowing && 'px-10'}`}>
+    <div className={`relative fixed border-b-1 border-white bg-[#000000c9] w-full flex items-center justify-between lg:justify-around ${!isMobileMenuShowing && 'px-10'}`}>
       <HeaderContext.Provider value={{ isMobileMenuShowing, setIsMobileMenuShowing, handleMobileMenuToggle }}>
         <Logo />
         <Menus />
