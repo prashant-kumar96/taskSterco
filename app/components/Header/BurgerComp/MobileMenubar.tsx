@@ -11,7 +11,7 @@ interface props {
 
 const MobileMenubar = ({}) => {
 
-  const handleMobileMenuToggle:props = useContext(HeaderContext).handleMobileMenuToggle;
+  const handleMobileMenuToggle = useContext(HeaderContext).handleMobileMenuToggle;
   return (
     <div className='w-screen py-10 border-b-1 border-white bg-gray-800 opacity-90'>
       <IoMdClose className="absolute top-7 right-10 text-2xl cursor-pointer text-white" onClick={handleMobileMenuToggle}/>

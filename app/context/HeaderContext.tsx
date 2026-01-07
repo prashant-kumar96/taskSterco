@@ -1,3 +1,13 @@
-import { createContext } from "react";
+import { createContext, SetStateAction } from "react";
 
- export const HeaderContext = createContext<any>()
+type HeaderContextType = {
+  handleMobileMenuToggle: () => void;
+  isMobileMenuShowing?: boolean;
+  setIsMobileMenuShowing: (value: SetStateAction<boolean>) => void;
+};
+
+ export const HeaderContext = createContext<HeaderContextType>({
+  handleMobileMenuToggle: () => {},
+  isMobileMenuShowing: false,
+  setIsMobileMenuShowing: (value: SetStateAction<boolean>) => {}
+})
